@@ -7,8 +7,6 @@ body {
 
    overflow-x: hidden;
 
-   line-height: 150%;
-
    background-color: white;
 }
 .topper {
@@ -58,6 +56,7 @@ body {
       padding-top: 300px;
       h1 {
          font-size: 40pt;
+         line-height: 45pt;
       }
       p {
          font-size: 18pt;
@@ -148,7 +147,7 @@ body {
    background-color: white;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
    .topper {
       flex-direction: column;
       height: 100%;
