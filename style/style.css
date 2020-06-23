@@ -14,14 +14,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .topper .logo {
+  margin-left: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,6 +41,7 @@ body {
 
 .topper .nav {
   margin-top: 20px;
+  margin-right: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,10 +63,57 @@ body {
           transform: translateY(-5px);
 }
 
+.topper .hamburger {
+  display: none;
+  margin-right: 30px;
+}
+
+.topper .hamburger #icon div {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+#menu {
+  width: 100%;
+  height: 150vh;
+  background-color: white;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+#menu .ham-link {
+  opacity: 0;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  margin-top: 30px;
+  font-size: 3rem;
+}
+
 .hero {
   height: 120vh;
+  min-height: 700px;
   width: 100%;
   background-image: url(../assets/background.jpg);
+  background-size: cover;
+  background-position: center center;
   color: white;
   text-align: center;
 }
@@ -71,7 +121,7 @@ body {
 .hero .txt {
   width: 50%;
   margin: 0 auto;
-  padding-top: 300px;
+  padding-top: 30px;
 }
 
 .hero .txt h1 {
@@ -132,7 +182,7 @@ body {
 }
 
 .small .img img {
-  height: 70%;
+  width: 60%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -209,14 +259,14 @@ body {
 }
 
 @media only screen and (max-width: 900px) {
+  .hamburger {
+    display: block !important;
+  }
   .topper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     height: 100%;
   }
   .topper .nav {
+    display: none;
     width: 100%;
   }
   .hero .txt {
@@ -268,6 +318,10 @@ body {
   }
 }
 
+.bigpic {
+  width: 100% !important;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #272e35;
@@ -286,11 +340,20 @@ body {
   .box {
     background-color: black;
   }
+  #menu {
+    background-color: #272e35;
+  }
+  #menu .ham-link {
+    color: white;
+  }
 }
 
 @media (prefers-color-scheme: light) {
   .box2 {
     background-color: black;
+  }
+  .hamburger #icon div {
+    background-color: black !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

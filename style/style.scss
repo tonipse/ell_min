@@ -14,10 +14,11 @@ body {
    height: 150px;
 
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: center;
 
    .logo {
+      margin-left: 50px;
       display: flex;
       width: 200px;
       align-items: center;
@@ -28,6 +29,7 @@ body {
    }
    .nav {
       margin-top: 20px;
+      margin-right: 40px;
 
       display: flex;
       justify-content: space-evenly;
@@ -42,18 +44,60 @@ body {
          transform: translateY(-5px);
       }
    }
+   .hamburger {
+      display: none;
+      margin-right: 30px;
+
+      #icon {
+         div {
+            content: "";
+            width: 50px;
+            height: 3px;
+            background-color: white;
+            margin-top: 10px;
+         }
+      }
+   }
+}
+#menu {
+   width: 100%;
+   height: 150vh;
+
+   background-color: white;
+   z-index: 100;
+
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+
+   position: absolute;
+
+   transform: translateX(100%);
+   .ham-link {
+      opacity: 0;
+      transform: translateX(100px);
+
+      margin-right: 20px;
+      text-decoration: none;
+      color: black;
+      margin-top: 30px;
+      font-size: 3rem;
+   }
 }
 .hero {
    height: 120vh;
+   min-height: 700px;
    width: 100%;
    background-image: url(../assets/background.jpg);
+   background-size: cover;
+   background-position: center center;
 
    color: white;
    text-align: center;
    .txt {
       width: 50%;
       margin: 0 auto;
-      padding-top: 300px;
+      padding-top: 30px;
       h1 {
          font-size: 40pt;
          line-height: 45pt;
@@ -92,7 +136,7 @@ body {
       justify-content: center;
       align-items: center;
       img {
-         height: 70%;
+         width: 60%;
          object-fit: contain;
       }
    }
@@ -148,10 +192,13 @@ body {
 }
 
 @media only screen and (max-width: 900px) {
+   .hamburger {
+      display: block !important;
+   }
    .topper {
-      flex-direction: column;
       height: 100%;
       .nav {
+         display: none;
          width: 100%;
       }
    }
@@ -196,6 +243,11 @@ body {
       margin-top: 30px;
    }
 }
+
+.bigpic {
+   width: 100% !important;
+}
+
 @media (prefers-color-scheme: dark) {
    body {
       background-color: #272e35;
@@ -218,9 +270,23 @@ body {
    .box {
       background-color: black;
    }
+   #menu {
+      background-color: #272e35;
+      .ham-link {
+         color: white;
+      }
+   }
 }
+
 @media (prefers-color-scheme: light) {
    .box2 {
       background-color: black;
+   }
+   .hamburger {
+      #icon {
+         div {
+            background-color: black !important;
+         }
+      }
    }
 }
