@@ -161,7 +161,13 @@ body {
 
    display: flex;
    align-items: center;
-   justify-content: space-evenly;
+   justify-content: space-between;
+   .one {
+      margin-left: 50px;
+   }
+   .four {
+      margin-right: 50px;
+   }
    a {
       text-decoration: none;
       color: white;
@@ -247,7 +253,19 @@ body {
       margin-top: 30px;
    }
 }
-
+@media only screen and (max-width: 360px) {
+   .box2 {
+      width: 50px;
+      height: 50px;
+   }
+   .topper {
+      .logo {
+         p {
+            font-size: 30pt;
+         }
+      }
+   }
+}
 .bigpic {
    width: 100% !important;
 }

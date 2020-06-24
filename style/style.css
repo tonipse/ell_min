@@ -82,9 +82,7 @@ body {
   height: 150vh;
   background-color: white;
   z-index: 100;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -186,6 +184,8 @@ body {
   width: 60%;
   -o-object-fit: contain;
      object-fit: contain;
+  height: 100%;
+  object-fit: contain;
 }
 
 .small h1 {
@@ -208,9 +208,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .one {
+  margin-left: 50px;
+}
+
+.footer .four {
+  margin-right: 50px;
 }
 
 .footer a {
@@ -316,6 +324,16 @@ body {
             align-items: flex-start;
     padding-left: 40px;
     margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .box2 {
+    width: 50px;
+    height: 50px;
+  }
+  .topper .logo p {
+    font-size: 30pt;
   }
 }
 
