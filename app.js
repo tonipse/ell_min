@@ -20,6 +20,6 @@ function toggle() {
       disappear
          .to("#menu", { ease: "power2.inOut", duration: 1, css: { transform: "translateX(100%)" } })
          .to("#menu", { css: { display: "none" } })
-         .to(".ham-link", { ease: "power2.inOut", x: 100, opacity: 0 });
+         .to(".ham-link", { x: 100, opacity: 0 });
    }
 }
